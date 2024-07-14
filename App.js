@@ -1,22 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, Text, Touchable, TouchableNativeFeedback, TouchableOpacity, View } from 'react-native';
-
+import { Image } from 'react-native';
+import { Alert, Dimensions, Platform, SafeAreaView, StyleSheet, Text, Touchable, TouchableNativeFeedback, TouchableOpacity, View } from 'react-native';
+import { StatusBar } from 'react-native';
+import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
+import WelcomeScreen from './App/screens/WelcomeScreen';
+import ViewImageScreen from './App/screens/ViewImageScreen';
 export default function App() {
-  let x = 1;
-  console.log("hello");
-  return (
-    <View style={styles.container}>
 
-      <StatusBar style="auto" />
-    </View>
+  return (
+    <ViewImageScreen />
+
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+
 });
